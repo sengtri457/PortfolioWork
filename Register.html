@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+</head>
+
+<body>
+    <form action="" id="form">
+        <input type="email" name="email" required id="email" placeholder="Email">
+        <input type="text" name="username" required id="username" placeholder="Username">
+        <input type="password" name="password" required id="password" placeholder="Password">
+        <input type="password" required id="confirmPassword" placeholder="Confirm Password">
+        <button type="submit">Register</button>
+    </form>
+    <script>
+        const form = document.getElementById('form');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var email = document.getElementById('email').value;
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var confirmPassword = document.getElementById('confirmPassword').value;
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                return;
+            }
+            const user = {
+                email: email,
+                username: username,
+                password: password
+            };
+            localStorage.setItem(username, JSON.stringify(user));
+            alert('User registered successfully');
+            window.location.href = "index.html";
+        })
+    </script>
+</body>
+
+</html>

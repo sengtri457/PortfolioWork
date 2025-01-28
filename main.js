@@ -114,6 +114,98 @@ const data = [
     category: "app",
     head: "Maecenas a tempus tortor",
   },
+
+  // {
+  //   id: 16,
+  //   title: "Digital Marketing",
+  //   Image: "./pic/project8.jpg",
+  //   category: "graphic",
+  //   head: "Maecenas a tempus tortor",
+  // },
+  // {
+  //   id: 16,
+  //   title: "Digital Marketing",
+  //   Image: "./pic/labelCoffee-01.jpg",
+  //   category: "graphic",
+  //   head: "Maecenas a tempus tortor",
+  // },
+  // {
+  //   id: 16,
+  //   title: "Digital Marketing",
+  //   Image: "./pic/Name-02.png",
+  //   category: "graphic",
+  //   head: "Maecenas a tempus tortor",
+  // },
+  // {
+  //   id: 16,
+  //   title: "Digital Marketing",
+  //   Image: "./pic/project10.jpg",
+  //   category: "graphic",
+  //   head: "Maecenas a tempus tortor",
+  // },
+  // {
+  //   id: 16,
+  //   title: "Digital Marketing",
+  //   Image: "./pic/2823647.jpg",
+  //   category: "graphic",
+  //   head: "Maecenas a tempus tortor",
+  // },
+  // {
+  //   id: 16,
+  //   title: "Digital Marketing",
+  //   Image: "./pic/kiwi1.jpg",
+  //   category: "graphic",
+  //   head: "Maecenas a tempus tortor",
+  // },
+  // {
+  //   id: 16,
+  //   title: "Digital Marketing",
+  //   Image: "./pic/Greentea_project.jpg",
+  //   category: "graphic",
+  //   head: "Maecenas a tempus tortor",
+  // },
+  // {
+  //   id: 16,
+  //   title: "Digital Marketing",
+  //   Image: "./pic/cosmetic.jpg",
+  //   category: "graphic",
+  //   head: "Maecenas a tempus tortor",
+  // },
+  // {
+  //   id: 16,
+  //   title: "Digital Marketing",
+  //   Image: "./pic/ss.jpg",
+  //   category: "graphic",
+  //   head: "Maecenas a tempus tortor",
+  // },
+  // {
+  //   id: 16,
+  //   title: "Digital Marketing",
+  //   Image: "./pic/orange_project7.jpg",
+  //   category: "graphic",
+  //   head: "Maecenas a tempus tortor",
+  // },
+  // {
+  //   id: 16,
+  //   title: "Digital Marketing",
+  //   Image: "./pic/shape.jpg",
+  //   category: "graphic",
+  //   head: "Maecenas a tempus tortor",
+  // },
+  // {
+  //   id: 16,
+  //   title: "Digital Marketing",
+  //   Image: "./pic/strawberry_project.jpg",
+  //   category: "graphic",
+  //   head: "Maecenas a tempus tortor",
+  // },
+  // {
+  //   id: 16,
+  //   title: "Digital Marketing",
+  //   Image: "./pic/watch project6.jpg",
+  //   category: "graphic",
+  //   head: "Maecenas a tempus tortor",
+  // },
 ];
 
 const ul = document.querySelector(".portfolio-flters");
@@ -141,7 +233,7 @@ const displayItems = (items) => {
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-  displayItems(data);
+  displayItems(data.filter((item) => item.id < 16));
 });
 
 li.forEach((item) => {
@@ -150,7 +242,7 @@ li.forEach((item) => {
     const newdata = data.filter((item) => item.category === categories);
 
     if (categories === "all") {
-      displayItems(data);
+      displayItems(data.filter((item) => item.id < 16));
     } else {
       displayItems(newdata);
     }
@@ -165,7 +257,7 @@ li.forEach((item) => {
     const newdata = data.filter((item) => item.category === categories);
 
     if (categories === "all") {
-      displayItems(data);
+      displayItems(data.filter((item) => item.id < 16));
     } else {
       displayItems(newdata);
     }
@@ -191,7 +283,7 @@ $backToTop.click(function (e) {
 
 // search
 const modal = document.querySelector(".modal");
-const input = document.querySelector(".form-control");
+const input = document.querySelector(".inputt");
 const sections = {
   about: document.getElementById("about"),
   exp: document.getElementById("exp"),
@@ -246,3 +338,11 @@ var pre = document.getElementById("preloader");
 window.addEventListener("load", function () {
   pre.style.display = "none";
 });
+
+const model = document.querySelector(".modal");
+
+// Mousetrap.bind("ctrl+p", function () {
+//   model.classList.add("show");
+//   input.focus();
+//   input.value = "";
+// });
