@@ -63,6 +63,12 @@ body {
     transition: all 0.4s ease-in-out;
 }
 
+h1 {
+    font-size: clamp(2rem, 5vw, 6rem);
+    font-family: 'Lobster Two', cursive;
+    font-weight: 700;
+}
+
 /* From Uiverse.io by gharsh11032000 */
 .cardd {
     position: relative;
@@ -219,6 +225,27 @@ html {
     height: 380px;
 }
 
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    position: absolute;
+    width: 0;
+    height: 3%;
+    content: "";
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-main);
+    transition: all 0.4s ease-in-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+
 .logo-img img {
     width: 100%;
     height: 100%;
@@ -230,8 +257,8 @@ html {
 }
 
 .text h1 {
-    font-size: 5vw;
-    font-family: var(--font-family-monospace);
+    /* font-size: 5vw; */
+    /* font-family: var(--font-family-monospace); */
     font-weight: var(--weight-larger);
     color: var(--light);
     text-transform: uppercase;
@@ -241,13 +268,13 @@ html {
     font-family: var(--font-family-monospace);
     font-weight: var(--weight-larger);
     color: var(--light);
-    font-size: 3.5vw;
+    font-size: clamp(1.2rem, 3vm, 1.5rem);
 }
 
 .text h3 {
     font-family: var(--font-family-monospace);
     font-weight: var(--weight-larger);
-    font-size: 3vw;
+
     color: var(--color-main);
 }
 
@@ -269,7 +296,7 @@ html {
     border: 1px solid var(--color-main);
     background-color: transparent;
     outline: none;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 50px;
 }
 
@@ -450,8 +477,14 @@ html {
 }
 
 .title-about h1 {
+    font-size: clamp(2rem, 5vw, 6rem);
     font-weight: var(--weight-larger);
     color: var(--color-main);
+}
+
+.title-about h3 {
+    font-weight: 700;
+    font-size: clamp(0.9rem, 2vw, 1.5rem);
 }
 
 .title-about p {
@@ -1542,7 +1575,7 @@ label {
     display: none;
 }
 
-/* #preloader {
+#preloader {
     position: fixed;
     top: 0;
     left: 0;
@@ -1552,7 +1585,7 @@ label {
     background: black url(./pic/load.gif) no-repeat center center;
     background-size: 100%;
     transition: all 0.4s ease-in-out;
-} */
+}
 
 @media screen and (min-width:768px) {
     #preloader {
@@ -1789,4 +1822,19 @@ label {
     font-weight: bold;
     letter-spacing: 1px;
     text-shadow: 0px 0px 0 #000;
+}
+
+.nav-link:hover {
+    color: var(--color-main);
+}
+
+
+
+
+@media screen and (min-width:768px) {
+    .btn-hire {
+        padding: 1rem 2rem;
+    }
+
+
 }
