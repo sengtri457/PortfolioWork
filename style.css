@@ -1582,7 +1582,7 @@ label {
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background: black url(./pic/load.gif) no-repeat center center;
+    background: rgb(255, 255, 255) url(./pic/Lottie\ Lego.gif) no-repeat center center;
     background-size: 100%;
     transition: all 0.4s ease-in-out;
 }
