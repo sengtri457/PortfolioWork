@@ -16,7 +16,7 @@ section {
     --weight-medum: 650;
     --font-large: 2rem;
     --weight-larger: 800;
-    --color-main: #af9483;
+    --color-main: #015FC9;
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -274,8 +274,9 @@ html {
 .text h3 {
     font-family: var(--font-family-monospace);
     font-weight: var(--weight-larger);
+    color: var(--light);
 
-    color: var(--color-main);
+    /* color: var(--color-main); */
 }
 
 .text h1 span {
@@ -307,7 +308,7 @@ html {
 .back-to-top {
     position: fixed;
     display: none;
-    background: #AF9483;
+    background: var(--color-main);
     color: #ffffff;
     width: 44px;
     height: 44px;
@@ -319,6 +320,7 @@ html {
     bottom: 15px;
     transition: background 0.5s;
     z-index: 99;
+    animation: zoomInOut 2s infinite;
 }
 
 .back-to-top i {
@@ -548,7 +550,7 @@ i {
     margin: 0 auto 20px;
     text-align: center;
     width: 120px;
-    color: #AF9483;
+    color: var(--color-main);
 }
 
 .list {
@@ -575,7 +577,7 @@ i {
     margin: 15px -3px 5px -3px;
     display: inline-block;
     padding: 10px 15px;
-    color: #AF9483;
+    color: var(--color-main);
     font-size: 14px;
     line-height: 15px;
     text-transform: uppercase;
@@ -596,7 +598,7 @@ i {
 }
 
 .portfolio-item figure {
-    background: #AF9483;
+    background: var(--color-main);
     overflow: hidden;
     height: 220px;
     position: relative;
@@ -736,7 +738,7 @@ i {
     font-weight: 300;
     padding: 10px 0;
     border: none;
-    border-bottom: 1px solid #AF9483;
+    border-bottom: 1px solid var(--color-main);
     border-radius: 0;
     box-shadow: none;
     background-color: transparent;
@@ -763,12 +765,12 @@ i {
 
 .contact .form button[type="submit"] {
     padding: 7px 30px 10px 30px;
-    color: #AF9483;
+    color: var(--color-main);
     letter-spacing: 1px;
     transition: 0.3s;
     cursor: pointer;
     border-radius: 0;
-    border: 1px solid #AF9483;
+    border: 1px solid var(--color-main);
     background-color: #fffbf2;
     margin-top: 1rem;
 }
@@ -786,7 +788,7 @@ i {
     padding: 1px 0;
     text-align: center;
     font-size: 22px;
-    border: 1px solid #AF9483;
+    border: 1px solid var(--color-main);
     transition: all 0.4s ease-in-out;
     color: #AF9483;
 }
@@ -904,7 +906,7 @@ i {
     position: relative;
     text-align: center;
     color: #ffffff;
-    background: #AF9483;
+    background: var(--color-main);
 }
 
 .counters::after {
@@ -1495,7 +1497,7 @@ label {
 
 .back-to-topp {
     position: fixed;
-    background: #AF9483;
+    background: var(--color-main);
     color: #ffffff;
     width: 44px;
     height: 44px;
@@ -1582,8 +1584,8 @@ label {
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background: rgb(255, 255, 255) url(./pic/Lottie\ Lego.gif) no-repeat center center;
-    background-size: 100%;
+    background: rgb(255, 255, 255) url(./pic/GCNyjJY.gif) no-repeat center center;
+    background-size: 70%;
     transition: all 0.4s ease-in-out;
 }
 
@@ -1828,6 +1830,9 @@ label {
     color: var(--color-main);
 }
 
+.btn-hire {
+    animation: zoomInOut 2s infinite;
+}
 
 
 
@@ -1837,4 +1842,16 @@ label {
     }
 
 
+}
+
+@keyframes zoomInOut {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
 }
