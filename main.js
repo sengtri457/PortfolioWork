@@ -10,66 +10,79 @@ window.addEventListener("scroll", () => {
 const data = [
   {
     id: 1,
-    title: "Web Development",
+    title: "Website Design",
+
     Image: "./pic/vegetable.webp",
     category: "web",
-    head: "Maecenas a tempus tortor",
+    head: "Visit Our Repositery",
   },
   {
     id: 2,
-    title: "App Development",
+    title: "Website Design",
+
     Image: "./pic/food.webp",
     category: "web",
-    head: "Maecenas a tempus tortor",
+    head: "Visit Our Repositery",
+    link: "https://github.com/sengtri457/BreadShop",
   },
   {
     id: 3,
-    title: "Web Design",
+    title: "Website Design",
+
     Image: "./pic/coffee-.webp",
     category: "web",
-    head: "Maecenas a tempus tortor",
+    head: "Visit Our Repositery",
+    link: "https://github.com/sengtri457/CoffeeKtri.github.io",
   },
   {
     id: 4,
-    title: "Digital Marketing",
+    title: "Website Design",
+
     Image: "./pic/bakery.webp",
     category: "web",
-    head: "Maecenas a tempus tortor",
+    head: "Visit Our Repositery",
+    link: "https://github.com/sengtri457/BreadShop",
   },
   {
     id: 5,
-    title: "Digital Marketing",
+    title: "Website Design",
+
     Image: "./pic/hospital.webp",
     category: "web",
-    head: "Maecenas a tempus tortor",
+    head: "Visit Our Repositery",
+    link: "https://github.com/sengtri457/hospital",
   },
   {
     id: 6,
-    title: "App Design",
+    title: "Website Design",
     Image: "./pic/car.webp",
     category: "web",
-    head: "Maecenas a tempus tortor",
+    head: "Visit Our Repositery",
+    link: "https://github.com/sengtri457/CarShop",
   },
   {
     id: 7,
-    title: "App Design",
+    title: "Website Design",
     Image: "./pic/drinking.webp",
     category: "web",
-    head: "Maecenas a tempus tortor",
+    head: "Visit Our Repositery",
+    link: "https://github.com/sengtri457/WaterShop",
   },
   {
     id: 8,
-    title: "App Design",
+    title: "Website Design",
     Image: "./pic/ai.webp",
     category: "web",
-    head: "Maecenas a tempus tortor",
+    head: "Visit Our Repositery",
+    link: "https://github.com/sengtri457/AI",
   },
   {
     id: 9,
-    title: "App Design",
+    title: "Website Design",
     Image: "./pic/consultancy.webp",
     category: "web",
-    head: "Maecenas a tempus tortor",
+    head: "Visit Our Repositery",
+    link: "https://github.com/sengtri457/bussnieus.github.io",
   },
 
   {
@@ -77,42 +90,47 @@ const data = [
     title: "Graphic Design",
     Image: "./pic/khmer.jpg",
     category: "graphic",
-    head: "Maecenas a tempus tortor",
+    head: "Visit Our Repositery",
   },
   {
     id: 11,
     title: "Digital Marketing",
     Image: "./pic/smart.jpg",
     category: "graphic",
-    head: "Maecenas a tempus tortor",
+    head: "Visit Our Repositery",
   },
   {
     id: 12,
     title: "Digital Marketing",
     Image: "./pic/Happy.jpg",
     category: "graphic",
-    head: "Maecenas a tempus tortor",
+    head: "Visit Our Repositery",
   },
   {
     id: 13,
-    title: "Digital Marketing",
-    Image: "./pic/bakery.webp",
+    title: "Website Design",
+
+    Image: "./pic/aupp.png",
     category: "app",
-    head: "Maecenas a tempus tortor",
+    head: "Visit Our Repositery",
+    link: "https://github.com/sengtri457/AuppClone",
   },
   {
     id: 14,
-    title: "Digital Marketing",
-    Image: "./pic/hospital.webp",
+    title: "Website Design",
+
+    Image: "./pic/CodeMaster.png",
     category: "app",
-    head: "Maecenas a tempus tortor",
+    head: "Visit Our Repositery",
+    link: "https://github.com/sengtri457/WebTeam",
   },
   {
     id: 15,
-    title: "App Design",
-    Image: "./pic/car.webp",
+    title: "Website Design",
+    Image: "./pic/Ecomerce.png",
     category: "app",
-    head: "Maecenas a tempus tortor",
+    head: "Visit Our Repositery",
+    link: "https://github.com/sengtri457/EcommerceJs",
   },
 
   {
@@ -219,7 +237,7 @@ const displayItems = (items) => {
       <div class="col-lg-4 col-sm-12 col-md-12 mb-3 mb-sm-3 mb-md-3 mb-lg-3">
         <div class="portfolio-item">
           <img src="${item.Image}" class="h-auto w-100 img-fluid" alt="${item.title}" />
-          <a href="img/portfolio-1.jpg" class="link-pre text-decoration-none"><i class="fa-solid fa-eye"></i></a>
+          <a href="${item.link}" class="link-pre text-decoration-none"><i class="fa-solid fa-eye"></i></a>
           <div class="content-port">
             <h2>${item.head}</h2>
             <h4>${item.title}</h4>
