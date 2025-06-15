@@ -359,8 +359,12 @@ window.addEventListener("load", function () {
 
 const model = document.querySelector(".modal");
 
-// Mousetrap.bind("ctrl+p", function () {
-//   model.classList.add("show");
-//   input.focus();
-//   input.value = "";
-// });
+// Dw CV
+document.querySelector(".btn-CV").addEventListener("click", function () {
+  const link = document.createElement("a");
+  link.href = "./pic/BunSengtri_CV.pdf"; // Replace with the actual file path
+  link.download = "BunSengtri_CV.pdf"; // Rename file when downloaded (optional)
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
