@@ -132,98 +132,22 @@ const data = [
     head: "Visit Our Repositery",
     link: "https://github.com/sengtri457/EcommerceJs",
   },
-
   {
-    id: 16,
+    id: 17,
     title: "Digital Marketing",
-    Image: "./pic/project8.jpg",
-    category: "graphic",
-    head: "Maecenas a tempus tortor",
+    Image: "./pic/image.png",
+    category: "app",
+    head: "Visit Our Repositery",
+    link: "https://daily-app-fjij.vercel.app/",
   },
   {
-    id: 16,
-    title: "Digital Marketing",
-    Image: "./pic/labelCoffee-01.jpg",
-    category: "graphic",
-    head: "Maecenas a tempus tortor",
+    id: 18,
+    title: "Website Design",
+    Image: "./pic/Loan.png",
+    category: "app",
+    head: "Visit Our Repositery",
+    link: "https://github.com/sengtri457/LoanMidterm",
   },
-  {
-    id: 16,
-    title: "Digital Marketing",
-    Image: "./pic/Name-02.png",
-    category: "graphic",
-    head: "Maecenas a tempus tortor",
-  },
-  {
-    id: 16,
-    title: "Digital Marketing",
-    Image: "./pic/project10.jpg",
-    category: "graphic",
-    head: "Maecenas a tempus tortor",
-  },
-  {
-    id: 16,
-    title: "Digital Marketing",
-    Image: "./pic/2823647.jpg",
-    category: "graphic",
-    head: "Maecenas a tempus tortor",
-  },
-  {
-    id: 16,
-    title: "Digital Marketing",
-    Image: "./pic/kiwi1.jpg",
-    category: "graphic",
-    head: "Maecenas a tempus tortor",
-  },
-  {
-    id: 16,
-    title: "Digital Marketing",
-    Image: "./pic/Greentea_project.jpg",
-    category: "graphic",
-    head: "Maecenas a tempus tortor",
-  },
-  {
-    id: 16,
-    title: "Digital Marketing",
-    Image: "./pic/cosmetic.jpg",
-    category: "graphic",
-    head: "Maecenas a tempus tortor",
-  },
-  {
-    id: 16,
-    title: "Digital Marketing",
-    Image: "./pic/ss.jpg",
-    category: "graphic",
-    head: "Maecenas a tempus tortor",
-  },
-  // {
-  //   id: 16,
-  //   title: "Digital Marketing",
-  //   Image: "./pic/orange_project7.jpg",
-  //   category: "graphic",
-  //   head: "Maecenas a tempus tortor",
-  // },
-  // {
-  //   id: 16,
-  //   title: "Digital Marketing",
-  //   Image: "./pic/shape.jpg",
-  //   category: "graphic",
-  //   head: "Maecenas a tempus tortor",
-  // },
-  // {
-  //   id: 16,
-  //   title: "Digital Marketing",
-  //   Image: "./pic/strawberry_project.jpg",
-  //   category: "graphic",
-  //   head: "Maecenas a tempus tortor",
-  // },
-  // {
-  //   id: 16,
-  //   title: "Digital Marketing",
-  //   Image: "./pic/watch project6.jpg",
-  //   category: "graphic",
-  //   head: "Maecenas a tempus tortor",
-  // },
 ];
 
 const ul = document.querySelector(".portfolio-flters");
@@ -251,7 +175,7 @@ const displayItems = (items) => {
 };
 
 window.addEventListener("DOMContentLoaded", () => {
-  displayItems(data.filter((item) => item.id < 16));
+  displayItems(data.filter((item) => item.id < 100));
 });
 
 li.forEach((item) => {
@@ -260,7 +184,7 @@ li.forEach((item) => {
     const newdata = data.filter((item) => item.category === categories);
 
     if (categories === "all") {
-      displayItems(data.filter((item) => item.id < 16));
+      displayItems(data.filter((item) => item.id < 100));
     } else {
       displayItems(newdata);
     }
@@ -275,7 +199,7 @@ li.forEach((item) => {
     const newdata = data.filter((item) => item.category === categories);
 
     if (categories === "all") {
-      displayItems(data.filter((item) => item.id < 16));
+      displayItems(data.filter((item) => item.id < 100));
     } else {
       displayItems(newdata);
     }

@@ -16,7 +16,7 @@ section {
     --weight-medum: 650;
     --font-large: 2rem;
     --weight-larger: 800;
-    --color-main: #015FC9;
+    --color-main: #2A7B9B;
     --blue: #007bff;
     --indigo: #6610f2;
     --purple: #6f42c1;
@@ -30,14 +30,14 @@ section {
     --white: #fff;
     --gray: #6c757d;
     --gray-dark: #343a40;
-    --primary: #007bff;
+    --primary: #276221;
     --secondary: #6c757d;
     --success: #28a745;
     --info: #17a2b8;
     --warning: #ffc107;
     --danger: #dc3545;
     --light: #f8f9fa;
-    --dark: #343a40;
+    --dark: #000000;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
@@ -155,7 +155,8 @@ html {
 .scrolled {
     position: relative;
     background-color: var(--color-main);
-    box-shadow: 0px 0px 10px 0px var(--light);
+    backdrop-filter: blur(5px);
+    color: var(--dark);
 }
 
 /* 
@@ -176,10 +177,10 @@ html {
     position: relative;
     width: 100%;
     background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.8),
             rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5),
-            rgba(0, 0, 0, 0.5)),
-        url("./pic/profile.JPG");
+            rgba(0, 0, 0, 0.8)),
+        url("./pic/pro2.JPG");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -245,6 +246,14 @@ html {
     width: 100%;
 }
 
+/* .about,
+.exp,
+.Service,
+.portfolio,
+.contact {
+    background: #FFFBF2;
+    background: linear-gradient(181deg, rgba(255, 251, 242, 1) 0%, rgba(70, 146, 60, 0.26) 35%, rgba(255, 251, 242, 0.4) 100%);
+} */
 
 .logo-img img {
     width: 100%;
@@ -820,7 +829,7 @@ i {
 
 .footer {
     position: relative;
-    background-color: black;
+    background-color: var(--color-main);
     color: #ffffff;
     padding: 4rem 0rem 2rem 0rem;
     text-align: center;
@@ -1513,8 +1522,8 @@ label {
 
 /* dark mode */
 .dark-mode {
-    background: #000000;
-    --gap: 5em;
+    background: var(--dark);
+    /* --gap: 5em;
     --line: 1px;
     --color: rgba(255, 255, 255, 0.2);
 
@@ -1526,9 +1535,11 @@ label {
             transparent calc(var(--gap) - var(--line)),
             var(--color) calc(var(--gap) - var(--line) + 1px),
             var(--color) var(--gap));
-    background-size: var(--gap) var(--gap);
+    background-size: var(--gap) var(--gap); */
+
     color: var(--light);
     transition: all 0.4s ease-in-out;
+    /* --color-main: #0f0; */
 }
 
 .dark-mode .offcanvas,
@@ -1584,7 +1595,7 @@ label {
     width: 100%;
     height: 100%;
     z-index: 9999;
-    background: rgb(255, 255, 255) url(./pic/GCNyjJY.gif) no-repeat center center;
+    background: #000000 url(./pic/b.gif) no-repeat center center;
     background-size: 70%;
     transition: all 0.4s ease-in-out;
 }
