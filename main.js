@@ -292,3 +292,12 @@ document.querySelector(".btn-CV").addEventListener("click", function () {
   link.click();
   document.body.removeChild(link);
 });
+
+const light = document.querySelector(".light");
+function moveLight(event) {
+  const x = event.clientX;
+  const y = event.clientY;
+  light.style.left = `${x}px`;
+  light.style.top = `${y}px`;
+}
+document.addEventListener("mousemove", moveLight);

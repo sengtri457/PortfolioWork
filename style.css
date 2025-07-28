@@ -36,7 +36,7 @@ section {
     --info: #17a2b8;
     --warning: #ffc107;
     --danger: #dc3545;
-    --light: #f8f9fa;
+    --light: #fffbf2;
     --dark: #000000;
     --breakpoint-xs: 0;
     --breakpoint-sm: 576px;
@@ -154,8 +154,8 @@ html {
 
 .scrolled {
     position: relative;
-    background-color: var(--color-main);
-    backdrop-filter: blur(5px);
+    background-color: rgba(23, 162, 184, 0.5);
+    backdrop-filter: blur(100px);
     color: var(--dark);
 }
 
@@ -1588,6 +1588,8 @@ label {
     display: none;
 }
 
+
+
 #preloader {
     position: fixed;
     top: 0;
@@ -1610,6 +1612,25 @@ label {
 .modal-body {
     background-color: var(--color-main);
 }
+
+.light {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: var(--color-main);
+    border-radius: 50%;
+    filter: blur(70px);
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    top: 0;
+
+}
+
+.about p {
+    color: #fffbf2;
+    transition: all 0.4s ease-in-out;
+}
+
 
 /* From Uiverse.io by 0xnihilism */
 .inputt {
@@ -1865,4 +1886,8 @@ label {
     50% {
         transform: scale(1.2);
     }
+}
+
+.dark-mode .about p {
+    color: var(--dark);
 }
