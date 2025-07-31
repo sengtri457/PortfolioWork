@@ -301,3 +301,75 @@ function moveLight(event) {
   light.style.top = `${y}px`;
 }
 document.addEventListener("mousemove", moveLight);
+// Get progress bar and indicator elements
+const progressBar = document.getElementById("progressBar");
+const scrollIndicator = document.getElementById("scrollIndicator");
+
+// Function to update progress bar
+function updateProgressBar() {
+  // Calculate scroll progress
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  const documentHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  const scrollPercent = (scrollTop / documentHeight) * 100;
+
+  // Update progress bar width
+  progressBar.style.width = scrollPercent + "%";
+
+  // Update percentage indicator - only show between 1% and 99%
+  const roundedPercent = Math.round(scrollPercent);
+  if (roundedPercent >= 1 && roundedPercent <= 99) {
+    scrollIndicator.style.display = "block";
+    scrollIndicator.textContent = roundedPercent + "%";
+  } else {
+    scrollIndicator.style.display = "none";
+  }
+}
+
+// Optimized scroll event listener using requestAnimationFrame
+let ticking = false;
+
+function requestTick() {
+  if (!ticking) {
+    requestAnimationFrame(updateProgressBar);
+    ticking = true;
+  }
+}
+
+window.addEventListener("scroll", function () {
+  requestTick();
+  ticking = false;
+});
+
+// Initialize progress bar on page load
+window.addEventListener("load", updateProgressBar);
+
+// Handle window resize
+window.addEventListener("resize", updateProgressBar);
+
+// Optional: Add click functionality to jump to specific sections
+progressBar.addEventListener("click", function (e) {
+  const rect = this.getBoundingClientRect();
+  const clickPosition = (e.clientX - rect.left) / rect.width;
+  const documentHeight =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+  const targetScrollPosition = documentHeight * clickPosition;
+
+  window.scrollTo({
+    top: targetScrollPosition,
+    behavior: "smooth",
+  });
+});
+
+// Add hover effect to progress bar
+progressBar.addEventListener("mouseenter", function () {
+  this.style.cursor = "pointer";
+  this.style.transform = "scaleY(1.5)";
+  this.style.transition = "transform 0.2s ease";
+});
+
+progressBar.addEventListener("mouseleave", function () {
+  this.style.transform = "scaleY(1)";
+});

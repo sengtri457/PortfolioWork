@@ -1602,12 +1602,7 @@ label {
     transition: all 0.4s ease-in-out;
 }
 
-@media screen and (min-width:768px) {
-    #preloader {
-        background-size: 20%;
-    }
 
-}
 
 .modal-body {
     background-color: var(--color-main);
@@ -1626,10 +1621,7 @@ label {
 
 }
 
-.about p {
-    color: #fffbf2;
-    transition: all 0.4s ease-in-out;
-}
+
 
 
 /* From Uiverse.io by 0xnihilism */
@@ -1888,6 +1880,70 @@ label {
     }
 }
 
-.dark-mode .about p {
+
+
+/* Progress Bar Styles */
+.progress-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+    background-size: 400% 400%;
+    width: 0%;
+    transition: width 0.1s ease;
+    animation: gradientShift 3s ease infinite;
+    border-radius: 0 3px 3px 0;
+    box-shadow: 0 0 15px rgba(255, 107, 107, 0.6);
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.scroll-indicator {
+    position: fixed;
+    bottom: 0;
+    right: 12%;
+    padding: 15px 20px;
+    font-size: clamp(1rem, 5vw, 2rem);
+    font-family: 'Lobster Two', cursive;
+    font-weight: 700;
     color: var(--dark);
+    transition: all 0.3s ease;
+    z-index: 99;
+}
+
+.scroll-indicator:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (min-width:768px) {
+    #preloader {
+        background-size: 20%;
+    }
+
+    .scroll-indicator {
+        right: 5%;
+    }
+
 }
