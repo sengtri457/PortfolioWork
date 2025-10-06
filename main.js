@@ -286,8 +286,8 @@ const model = document.querySelector(".modal");
 // Dw CV
 document.querySelector(".btn-CV").addEventListener("click", function () {
   const link = document.createElement("a");
-  link.href = "./pic/BunSengtri_CV.pdf"; // Replace with the actual file path
-  link.download = "BunSengtri_CV.pdf"; // Rename file when downloaded (optional)
+  link.href = "./pic/Persional_BunSengtri_CV.pdf"; // Replace with the actual file path
+  link.download = "Persional_BunSengtri_CV.pdf"; // Rename file when downloaded (optional)
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
